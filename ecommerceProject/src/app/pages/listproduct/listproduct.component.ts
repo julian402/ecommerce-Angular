@@ -15,7 +15,7 @@ productService = inject(ProductService);
 products= signal <null| Product[]> (null)
 
 ngOnInit() {
-  this.productService.getAll().subscribe({
+  this.productService.getAllProducts().subscribe({
     next: (response: any) => {
       console.log(response);
       this.products.set(response)
