@@ -21,7 +21,7 @@ header {
   
   .buttons {
     display: flex;
-    gap: 80px;
+    gap: 70px;
   }
   .icon-button {
     background-color: #75a2bf;
@@ -63,4 +63,11 @@ header {
   
   .icon-buttonR:hover {
     color: #f0a500;
+  }
+
+  @media screen and (max-width: 760px) {
+    .buttons {
+      gap: 20px;
+    }
+    
   }
