@@ -12,7 +12,10 @@
       <div class="size-selection">
         <p>Selecciona tu talla</p>
         <div class="sizes-grid">
-          <button>33</button>
+          @for(size of product()?.size; track size){
+          <button>{{ size }}</button>
+          }
+          <!-- <button>33</button>
           <button>34</button>
           <button>35</button>
           <button>36</button>
@@ -24,11 +27,11 @@
           <button>42</button>
           <button>43</button>
           <button>44</button>
-          <button>45</button>
+          <button>45</button> -->
         </div>
         <a href="#" class="size-guide">Guía de tallas</a>
       </div>
-      <p class="price">$190.000</p>
+      <p class="price">{{ product()?.price }}</p>
 
       <div class="quantity">
         <button>-</button>
@@ -42,10 +45,7 @@
       </div>
 
       <p class="description">
-        La luminosidad sigue viva con este calzado de básquetbol original. La
-        fusión de la comodidad de la duela y un estilo externo a la cancha le da
-        un giro fresco a lo que mejor conoces: una confección inspirada en los
-        años 80, detalles audaces y un estilo basquetbolero puro.
+        {{ product()?.description }}
       </p>
     </div>
   </div>
