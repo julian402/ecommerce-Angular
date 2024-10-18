@@ -1,14 +1,17 @@
 interface Product {
-  _id: string;
-  name: string;
-  size: string[];
-  stock: number;
-  price: number;
-  category: string;
-  brand: string;
-  images: string;
+_id: string;
+name:string;
+size: string[];
+stock: number;
+price: number;
+category: {
+    name:string;
+    gender:string;
+  },
+  brand: string,
+  images:string[],
   description: string;
-  sale: number;
+  sale:number;
 }
 
-export default Product;
+export default Product

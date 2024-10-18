@@ -4,7 +4,7 @@
   } @else {
   <div class="product-container">
     <div class="image-section">
-      <img [src]="product()?.images" alt="" />
+      <img [src]="product()?.images?.[0]" alt="" />
     </div>
     <div class="details-section">
       <h2 class="h2-details">{{ product()?.brand }}</h2>

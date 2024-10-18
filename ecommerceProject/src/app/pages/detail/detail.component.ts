@@ -11,12 +11,13 @@ import Product from '../../../../types/Product';
 })
 export class DetailComponent {
   productService = inject(ProductService);
-  @Input() productId: string = '';
+  @Input() id: string = '';
 
   product = signal<null | Product>(null);
 
   ngOnInit() {
-    this.productService.getOneProduct(this.productId).subscribe({
+    console.log('Este es el detalle', this.id);
+    this.productService.getOneProduct(this.id).subscribe({
       next: (response: any) => {
         console.log(response);
         this.product.set(response);
