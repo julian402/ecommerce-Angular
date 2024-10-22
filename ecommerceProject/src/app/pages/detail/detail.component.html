@@ -7,7 +7,7 @@
       <img [src]="product()?.images?.[0]" alt="" />
     </div>
     <div class="details-section">
-      <h2 class="h2-details">{{ product()?.brand }}</h2>
+      <h2 class="h2-details">{{ product()?.category?.name }}</h2>
       <h1 class="h1-details">{{ product()?.name }}</h1>
       <div class="size-selection">
         <p>Selecciona tu talla</p>
